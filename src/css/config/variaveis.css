@@ -1,0 +1,14 @@
+
+:root{
+    /* Cores de fundo */
+    --cor-background-primeiro: #ffffff;
+    --cor-background-segundo: #9e0a0a;
+
+    /* Cores Fontes */
+    --cor-fonte-primeiro:#9e0a0a;
+    --cor-fonte-segundo:#ffffff;
+
+    /* Tipos de fonte */
+    --fonte-titulo: "Lugrasimo", cursive;
+    --fonte-texto: "Raleway", sans-serif;
+}
