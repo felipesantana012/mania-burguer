@@ -1,3 +1,4 @@
+//--------------------------INICIO CRIAÇÃO CABECALHO--------------------------
 const div = document.createElement("div");
 div.classList.add('cabecalho');
 div.innerHTML = `
@@ -25,15 +26,29 @@ div.innerHTML = `
   </li>
 
   <li class="cabecalho__menu__lista-link">
-    <img src="/src/img/modo-dia.png" alt="" class="cabecalho__menu__lista-link-img">
+    <div class="cabecalho__menu__dark">
+      <input type="checkbox" class="checkbox" id="ativar-modo-dark" />
+      <label class="label" for="ativar-modo-dark">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      <div class="ball"></div>
+      </label>
+    </div>
   </li>
 
 </ul>
 </div>
 
 <div class="menu-burguer">
-<img src="/src/img/modo-dia.png" alt="" class="cabecalho__menu__lista-link-img">
-<i class="fa-solid fa-bars icone"></i>
+  <div class="cabecalho__menu__dark">
+      <input type="checkbox" class="checkbox" id="ativar-modo-dark" />
+      <label class="label" for="ativar-modo-dark">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      <div class="ball"></div>
+      </label>
+    </div>
+  <i class="fa-solid fa-bars icone"></i>
 </div>
 
 <div class="menu-burguer-links " >
@@ -54,18 +69,16 @@ div.innerHTML = `
 </li>
 
 </div>
-
 `
-const header = document.querySelector('header')
-header.appendChild(div);
+const todoCabecalho = document.getElementById('todo-cabecalho')
+todoCabecalho.appendChild(div);
+//--------------------------FIM CRIAÇÃO CABECALHO--------------------------
 
 
 
-
+//--------------------------INICIO MENU MOBILE--------------------------
 const btnMenuBurguer = document.querySelector('.icone')
 const menuBurguer = document.querySelector('.menu-burguer-links')
-
-console.log(menuBurguer)
 
 btnMenuBurguer.addEventListener('click', () =>{
     menuBurguer.classList.toggle('abrir-menu-burguer')
@@ -73,8 +86,16 @@ btnMenuBurguer.addEventListener('click', () =>{
 
     btnMenuBurguer.classList = iconeMenu ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
 })
+//--------------------------FIM MENU MOBILE--------------------------
 
 
 
+// --------------------------INICIO MODO-DARK--------------------------
+const html = document.querySelector('html')
+const ativarModoDark = document.querySelector('#ativar-modo-dark')
 
+ativarModoDark.addEventListener('change' , () =>{
+    html.classList.toggle('dark-mode')
+})
+// --------------------------FIM MODO-DARK--------------------------
 

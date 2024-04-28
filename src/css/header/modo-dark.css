@@ -1,0 +1,58 @@
+
+.cabecalho__menu__lista-link{
+    padding-right: 1rem;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .label {
+    background-color: var(--cor-background-modo-dark);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    padding: 0px 3px;
+    position: relative;
+    height: 19px;
+    width: 35px;
+    transform: scale(1.5);
+    font-size: 11px;
+    box-shadow: 1px 1px 4px 1px rgb(0, 0, 0, 0.4);
+  }
+  
+  
+  .label .ball {
+    background-color: var(--cor-fonte-primeiro);
+    border-radius: 50%;
+    position: absolute;
+
+    left: 1px;
+    height: 19px;
+    width: 19px;
+    transform: translateX(-1px);
+    transition: transform 0.5s ease;
+    
+  }
+  
+  .checkbox:checked + .label .ball {
+    transform: translateX(21px);
+  }
+
+  
+  .fa-moon {
+    color: #0e2f5ede;
+    text-shadow: 1px 1px 4px rgb(60, 69, 117);
+  }
+  
+  .fa-sun {
+    color: #fff570c0;
+    text-shadow: 1px 1px 4px rgb(255, 251, 0);
+
+  }
+  

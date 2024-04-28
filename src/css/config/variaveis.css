@@ -1,14 +1,32 @@
 
 :root{
     /* Cores de fundo */
-    --cor-background-primeiro: #ffffff;
-    --cor-background-segundo: #9e0a0a;
+    --cor-background-primeiro: #fffce5;
+    --cor-background-segundo: #ff7272d2;
 
     /* Cores Fontes */
-    --cor-fonte-primeiro:#9e0a0a;
+    --cor-fonte-primeiro:#4e0000;
     --cor-fonte-segundo:#ffffff;
+
+    /* Cores Modo-Dark e shadow */
+    --cor-background-modo-dark: #ffffff;
+
 
     /* Tipos de fonte */
     --fonte-titulo: "Lugrasimo", cursive;
     --fonte-texto: "Raleway", sans-serif;
+}
+
+.dark-mode:root{
+       /* Cores de fundo */
+       --cor-background-primeiro: #1b0a0a;
+       --cor-background-segundo: #fffd94d2;
+   
+       /* Cores Fontes */
+       --cor-fonte-primeiro:#fffbc8;
+       --cor-fonte-segundo:#200000;
+   
+       /* Cores Modo-Dark e shadow */
+       --cor-background-modo-dark: #5e0000;
+
 }

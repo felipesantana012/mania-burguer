@@ -1,0 +1,22 @@
+.btn{
+    background-color: blue;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover{
+    scale: 1.05;
+}
+
+.btn:active{
+    transform: scale(1.5);
+}
+
+body{
+    transition: 0.8s linear;
+    background-color: var(--cor-background-primeiro);
+    color: var(--cor-fonte-primeiro);
+}

@@ -3,8 +3,13 @@
 @import url('/src/css/config/reset.css');
 @import url('/src/css/config/variaveis.css');
 @import url('/src/css/header/header.css');
+@import url('/src/css/header/modo-dark.css');
 
 
 /* Fontes */
 @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Icones */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
