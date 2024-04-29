@@ -1,4 +1,4 @@
-//--------------------------INICIO CRIAÇÃO CABECALHO--------------------------
+// --------------------------INICIO CRIAÇÃO CABECALHO--------------------------
 const div = document.createElement("div");
 div.classList.add('cabecalho');
 div.innerHTML = `
@@ -40,14 +40,6 @@ div.innerHTML = `
 </div>
 
 <div class="menu-burguer">
-  <div class="cabecalho__menu__dark">
-      <input type="checkbox" class="checkbox" id="ativar-modo-dark" />
-      <label class="label" for="ativar-modo-dark">
-        <i class="fas fa-sun"></i>
-        <i class="fas fa-moon"></i>
-      <div class="ball"></div>
-      </label>
-    </div>
   <i class="fa-solid fa-bars icone"></i>
 </div>
 
@@ -68,6 +60,16 @@ div.innerHTML = `
   <a href="#" class="cabecalho__menu__lista-link-ancora">Feedbacks</a>
 </li>
 
+<li class="cabecalho__menu__lista-link">
+    <div class="cabecalho__menu__dark">
+      <input type="checkbox" class="checkbox" id="ativar-modo-dark-mobile"/>
+      <label class="label" for="ativar-modo-dark-mobile">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
+  </li>
 </div>
 `
 const todoCabecalho = document.getElementById('todo-cabecalho')
@@ -97,5 +99,14 @@ const ativarModoDark = document.querySelector('#ativar-modo-dark')
 ativarModoDark.addEventListener('change' , () =>{
     html.classList.toggle('dark-mode')
 })
+
+
+const ativarModoDarkMobile = document.querySelector('#ativar-modo-dark-mobile')
+
+ativarModoDarkMobile.addEventListener('change' , () =>{
+    html.classList.toggle('dark-mode')
+})
+
+
 // --------------------------FIM MODO-DARK--------------------------
 

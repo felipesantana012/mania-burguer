@@ -1,6 +1,7 @@
 
 /* Imports Links CSS */
 @import url('/src/css/config/reset.css');
+@import url('/src/css/config/style.css');
 @import url('/src/css/config/variaveis.css');
 @import url('/src/css/header/header.css');
 @import url('/src/css/header/modo-dark.css');
