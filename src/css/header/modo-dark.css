@@ -10,7 +10,8 @@
   }
   
   .label {
-    background-color: var(--cor-background-modo-dark);
+    background-image: var(--cor-background-modo-dark);
+    background-size: cover;
     border-radius: 50px;
     cursor: pointer;
     display: flex;
@@ -22,7 +23,7 @@
     width: 35px;
     transform: scale(1.5);
     font-size: 12px;
-    box-shadow: 1px 1px 4px 1px rgb(0, 0, 0, 0.4);
+    box-shadow: var(--cor-box-shadow)
   }
   
   
@@ -43,7 +44,7 @@
 
   
   .fa-moon {
-    color: #33598dde;
+    color: #c0daff;
     text-shadow: 1px 1px 5px rgb(26, 43, 138);
   }
   

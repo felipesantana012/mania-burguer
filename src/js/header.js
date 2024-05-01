@@ -4,7 +4,7 @@ div.classList.add('cabecalho');
 div.innerHTML = `
 
 <div class="cabecalho__logo">
-<a href="/"><img src="/src/img/logo-burguer.png" alt="Logo do site, um hambuguer" class="cabecalho__logo-img"></a>
+<a href="/"><img src="/src/img/logos-icone/Logo-Mania-Food.png" alt="Logo do site, um hambuguer" class="cabecalho__logo-img"></a>
 </div>
 
 <div class="cabecalho__menu">
@@ -71,6 +71,9 @@ div.innerHTML = `
     </div>
   </li>
 </div>
+
+
+
 `
 const todoCabecalho = document.getElementById('todo-cabecalho')
 todoCabecalho.appendChild(div);

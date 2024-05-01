@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mania Burguer</title>
-    <link rel="icon" type="image/png" href="/src/img/icon-burguer-pagina.png">
+    <link rel="icon" type="image/png" href="/src/img/logos-icone/Icone-Mania-Food.png">
     <link rel="stylesheet" href="/src/css/config/imports.css">
 
 
@@ -14,14 +14,59 @@
 <body>
     <div class="container">
         <header id="todo-cabecalho">
-
         </header>
 
-
-
         <main>
-            <h1>helo</h1>
-
+                    <section class="wrapper">
+                        <div class="slide-wrapper" data-slide="wrapper">
+                            <button class="slide-nav-button slide-nav-previous fas fa-chevron-left" data-slide="nav-previous-button"></button>
+                            <button class="slide-nav-button slide-nav-next fas fa-chevron-right" data-slide="nav-next-button"></button>
+                            <div class="slide-list" data-slide="list">
+        
+                                <div class="slide-item" data-slide="item" data-index="0">
+                                    <div class="slide-content">
+                                        <img class="slide-image" src="/src/img/carrossel/hamguer.svg" alt="Hamburguer" />
+                                        <div class="slide-description">
+                                            <h3>Hamburgueres</h3>   
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="slide-item" data-slide="item" data-index="1">
+                                    <div class="slide-content">
+                                        <img class="slide-image" src="/src/img/carrossel/hot dog.svg" alt="Hot Dog" />
+                                        <div class="slide-description">
+                                            <h3>Hot Dogs</h3>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="slide-item" data-slide="item" data-index="2">
+                                    <div class="slide-content">
+                                        <img class="slide-image" src="/src/img/carrossel/pizza.svg" alt="Pizza" />
+                                        <div class="slide-description">
+                                            <h3>Pizzas</h3>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="slide-item" data-slide="item" data-index="3">
+                                    <div class="slide-content">
+                                        <img class="slide-image" src="/src/img/carrossel/sanduiche.svg" alt="Sanduiche" />
+                                        <div class="slide-description">
+                                            <h3>Sanduiches</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+        
+                            </div>
+                            <div class="slide-controls" data-slide="controls-wrapper">
+                            </div>
+                        </div>
+                    </section>
+               
+           
         </main>
 
 
@@ -30,6 +75,8 @@
         </footer>
 
     </div>
+
+    <script src="/src/js/slides.js"></script>
     <script src="/src/js/header.js" defer></script>
 </body>
 
