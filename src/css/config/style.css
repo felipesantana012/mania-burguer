@@ -3,14 +3,16 @@
 body{
     transition: 0.5s linear;
     background-color: var(--cor-background-primeiro);
+    
 
 } 
 
 .container{
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 12vh 78vh 10vh;
+    grid-template-rows: 12vh auto 8vh;
     grid-template-areas: "h h" "m m" "f f"; 
+   
 }
 
 
@@ -26,7 +28,8 @@ main{
     background-color: var(--cor-transparente);
     color: var(--cor-fonte-segundo);
     grid-area: m;
-    gap: 2rem;
+    overflow: auto;
+    
 }
 
 

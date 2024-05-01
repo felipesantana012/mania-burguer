@@ -4,8 +4,9 @@
     --cor-box-shadow: 1px 1px 4px 1px rgb(0, 0, 0, 0.4);
 
     /* Cores de fundo */
-    --cor-background-primeiro: #ececec;
+    --cor-background-primeiro: #e6e6e6;
     --cor-background-segundo: #1d1d1d;
+    --cor-background-terceiro: #f1f1f1;
 
     /* Cores Fontes */
     --cor-fonte-primeiro:#fffde6;
@@ -26,9 +27,9 @@
 
 .dark-mode:root{
        /* Cores de fundo */
-       --cor-background-primeiro: #1d1b1b;
+       --cor-background-primeiro: #141313;
        --cor-background-segundo:  #ececec;
-
+       --cor-background-terceiro: #1f1d1d;
        /* Cores Fontes */
        --cor-fonte-primeiro:#f5f5f5;
        --cor-fonte-segundo:#ffffffd5;
