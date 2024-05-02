@@ -1,7 +1,7 @@
 
 :root{
     --cor-transparente:transparent;
-    --cor-box-shadow: 1px 1px 4px 1px rgb(0, 0, 0, 0.4);
+    --cor-box-shadow: 2px 2px 10px 2px rgb(0, 0, 0, 0.2);
 
     /* Cores de fundo */
     --cor-background-primeiro: #e6e6e6;
@@ -11,6 +11,7 @@
     /* Cores Fontes */
     --cor-fonte-primeiro:#fffde6;
     --cor-fonte-segundo:#080808d5;
+    --cor-fonte-terceiro:#c7a200;
 
 
     /* Cores Modo-Dark e shadow */
@@ -19,10 +20,16 @@
 
     /* Cores Hover e Borda */
     --cor-hover-border-primeiro:#ffb223;
+    --cor-hover-border-segundo:#aa6f00;
 
     /* Tipos de fonte */
     --fonte-titulo: "Lugrasimo", cursive;
     --fonte-texto: "Raleway", sans-serif;
+
+
+    /* Outras cores */
+    --cor-vermelho:rgb(173, 0, 0);
+    --cor-verde:rgb(5, 158, 0);
 }
 
 .dark-mode:root{
@@ -33,6 +40,9 @@
        /* Cores Fontes */
        --cor-fonte-primeiro:#f5f5f5;
        --cor-fonte-segundo:#ffffffd5;
+       --cor-fonte-terceiro:#ffbc3f;
+
+       --cor-box-shadow:  2px 2px 10px 2px rgba(0, 0, 0, 0.3);
 
        /* Cores Modo-Dark e shadow */
        --cor-background-modo-dark: url('https://i.pinimg.com/564x/4a/a3/fe/4aa3fe89c34c7db3ae4deaa333187191.jpg');

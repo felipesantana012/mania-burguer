@@ -118,6 +118,10 @@
         display: none;
     }
 
+    .slide-nav-button {
+        font-size: 1.4rem;
+    }
+
     
     .slide-nav-previous {
         left: 10px;

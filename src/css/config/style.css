@@ -28,7 +28,7 @@ main{
     background-color: var(--cor-transparente);
     color: var(--cor-fonte-segundo);
     grid-area: m;
-    overflow: auto;
+    overflow: hidden;
     
 }
 
