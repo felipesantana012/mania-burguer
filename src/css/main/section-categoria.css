@@ -24,7 +24,7 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 13px;
-    gap: 15px;
+    gap: 10px;
     box-shadow: var(--cor-box-shadow);
     
 }
@@ -52,14 +52,6 @@
 
 @media screen and (max-width:600px) {
 
-    .categoria__lista{
-        display: block;
-        flex-wrap: nowrap;
-        column-count: 3;
-        column-gap: 25px;
-      
-        
-    }
 
     .categoria__lista li{
         padding-bottom: 13px;
