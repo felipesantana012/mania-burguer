@@ -97,7 +97,7 @@
 
 .comida__descricoes-btn{
     cursor: pointer;
-    background-color: var(--cor-fonte-terceiro);
+    background-color: var(--cor-hover-border-segundo);
     color: var(--cor-fonte-segundo);
     border: none;
     border-radius: 1rem;
@@ -111,7 +111,7 @@
 }
 
 .comida__descricoes-btn:hover{
-    background-color: var(--cor-hover-border-segundo);
+    opacity: 0.8;
     font-weight: 600;
     transform: scale(1.03);
 }
@@ -119,12 +119,12 @@
 .comida__descricoes-contador{
     width: 40%;
     display: flex;
-    gap: 5px;
+    gap: 6px;
     justify-content: center;
 }
 
 .comida__descricoes-contador span{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-family: var(--fonte-texto);
     color: var(--cor-fonte-segundo);
     font-weight: 500;
@@ -135,7 +135,7 @@
     color: var(--cor-fonte-primeiro);
     cursor: pointer;
     background-color: var(--cor-verde);
-    border-radius: 50%;
+    border-radius: 40%;
     padding: 0.2rem;
     margin: 0.1rem;
 }
