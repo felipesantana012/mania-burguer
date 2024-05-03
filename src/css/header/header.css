@@ -122,8 +122,6 @@
     }
 
     .cabecalho__menu__lista-link:hover {
-        border: 1px solid var(--cor-hover-border-primeiro);
-        border-radius: 10px;
         transform: scale(1.1);
     }
 

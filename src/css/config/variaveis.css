@@ -11,7 +11,7 @@
     /* Cores Fontes */
     --cor-fonte-primeiro:#fffde6;
     --cor-fonte-segundo:#080808d5;
-    --cor-fonte-terceiro:#c7a200;
+    --cor-fonte-terceiro:#af8f00;
 
 
     /* Cores Modo-Dark e shadow */
@@ -20,7 +20,7 @@
 
     /* Cores Hover e Borda */
     --cor-hover-border-primeiro:#ffb223;
-    --cor-hover-border-segundo:#aa6f00;
+    --cor-hover-border-segundo:#fff349;
 
     /* Tipos de fonte */
     --fonte-titulo: "Lugrasimo", cursive;
@@ -40,7 +40,7 @@
        /* Cores Fontes */
        --cor-fonte-primeiro:#f5f5f5;
        --cor-fonte-segundo:#ffffffd5;
-       --cor-fonte-terceiro:#ffbc3f;
+       --cor-fonte-terceiro:#f0ab2c;
 
        --cor-box-shadow:  2px 2px 10px 2px rgba(0, 0, 0, 0.3);
 

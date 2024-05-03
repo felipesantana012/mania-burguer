@@ -7,7 +7,7 @@
 }
 
 .categoria__titulo{
-    font-size: 24px;
+    font-size: 1.6rem;
     font-weight: 700;
     font-family: var(--fonte-titulo);
     color: var(--cor-fonte-segundo);
@@ -15,7 +15,7 @@
 
 .categoria__lista{
     background-color: var(--cor-background-terceiro);
-    border: 1px solid var(--cor-fonte-segundo);
+    border: 1px solid var(--cor-fonte-terceiro);
     border-radius: 20px;
     height: auto;
     width: 80%;
@@ -26,6 +26,7 @@
     padding: 15px;
     gap: 15px;
     box-shadow: var(--cor-box-shadow);
+    
 }
 
 .categoria__lista li:hover{
@@ -34,8 +35,6 @@
 }
 
 .categoria__item{
-    flex-grow: 1;
-    flex-basis: 50;
     text-decoration: none;
     font-family: var(--fonte-texto);
     color: var(--cor-fonte-terceiro);
@@ -53,7 +52,16 @@
 @media screen and (max-width:600px) {
 
     .categoria__lista{
-    
+        display: block;
+        flex-wrap: nowrap;
+        column-count: 2;
+        column-gap: 25px;
+        
+    }
+
+    .categoria__lista li{
+        padding-bottom: 13px;
+        text-align: center;
     }
         
     }
