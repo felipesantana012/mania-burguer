@@ -122,3 +122,42 @@
 .contato__imagem-img{
     width: 40px;
 }
+
+@media screen and (max-width:830px) {
+
+    .localizacao{
+        flex-direction: column;
+    }
+
+    .localizacao__google{
+        text-align: center;
+    }
+
+    .localizacao__google iframe{
+        width:95%;
+        height: 200px;
+    }
+
+    .contato{
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    .contato__descricao{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .contato{
+        flex-direction: column;
+    }
+
+    .localizacao__contato-titulo{
+        font-size: 1.5rem;
+    }
+
+   
+     
+}
