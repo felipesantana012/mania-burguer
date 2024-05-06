@@ -99,19 +99,14 @@
     object-fit: contain;
     height: 100%;
     width: 100%;
-    animation: girar 10s linear infinite;
+    transition: all 0.5s;
+}
+
+.prato__img-imagem:hover{
+    transform: scale(1.05);
 }
 
 
-
-@keyframes girar {
-    0% {
-        transform: rotate(-10deg) skewX(10deg);
-    }
-    100% {
-        transform: rotate(10deg) skewX(-30deg);
-    }
-}
 
 
 

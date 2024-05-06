@@ -43,9 +43,10 @@
 .slide-image {
     border-radius: 10px;
     width: 20%;
-    /* height: 15rem; */
+    height: 15rem;
     overflow: hidden;
     margin-top: 10px;
+    margin-bottom: 1rem;
 }
 
 .slide-description {
@@ -60,7 +61,7 @@
 
 .slide-description h3 {
     font-family: var(--fonte-titulo);
-    font-size: 40px;
+    font-size: 30px;
     padding-left: 4rem;
     bottom: 2rem;
 }
@@ -107,6 +108,9 @@
 
     .slide-image {
         width: 30%;
+        height: 10rem;
+        object-fit: contain;
+        margin-bottom: 1.5rem;
     }
 
     .slide-description {
@@ -114,8 +118,9 @@
     }
     
     .slide-description h3 {
-        font-size: 24px;
-        padding-left: 1rem;
+        font-size: 18px;
+        padding-left: 0.5rem;
+        
         
     }
 
