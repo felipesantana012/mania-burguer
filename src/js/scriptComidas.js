@@ -1,27 +1,27 @@
 
-        let sectionCategoriasCards = document.querySelector('.todas__comidas__pratos__categorias')  
-        cardapio.forEach(itemCategoria => {
-            
-            let comidas = document.createElement('div')
-            comidas.classList.add('comidas')
-            sectionCategoriasCards.append(comidas)
+let sectionCategoriasCards = document.querySelector('.todas__comidas__pratos__categorias')
+cardapio.forEach(itemCategoria => {
 
-            let tituloCategoria = document.createElement('h2')
-            tituloCategoria.classList.add('comida__titulo')
-            tituloCategoria.id = itemCategoria.categoria
-         
-            tituloCategoria.textContent = itemCategoria.categoria
+    let comidas = document.createElement('div')
+    comidas.classList.add('comidas')
+    sectionCategoriasCards.append(comidas)
 
-            let cardsComida = document.createElement('div')
-            cardsComida.classList.add('comida__cards')
-            comidas.append(tituloCategoria)
-            itemCategoria.itens.forEach(item => {
-                
-    
-                comidas.append(cardsComida)
-              
-                cardsComida.innerHTML += ` 
-                <div class="comida__card__descricoes__img">
+    let tituloCategoria = document.createElement('h2')
+    tituloCategoria.classList.add('comida__titulo')
+    tituloCategoria.id = itemCategoria.categoria
+
+    tituloCategoria.textContent = itemCategoria.categoria
+
+    let cardsComida = document.createElement('div')
+    cardsComida.classList.add('comida__cards')
+    comidas.append(tituloCategoria)
+    itemCategoria.itens.forEach(item => {
+
+
+        comidas.append(cardsComida)
+
+        cardsComida.innerHTML += ` 
+            <div class="comida__card__descricoes__img">
                 <div class="comida__descricoes">
                     <h3 class="comida__descricoes-nome" data-nome-produto>${item.nome}</h3>
                     <ul class="comida__descricoes_informacoes">
@@ -31,7 +31,7 @@
                     </ul>
                     <p class="comida__descricoes-final">${item.descricao}</p>
                     <div class="comida__descricoes-btn-icon">
-                        <button class="comida__descricoes-btn">Adicionar</button>
+                        <button class="comida__descricoes-btn" data-pegar-elemento>Pedir</button>
                         <div class="comida__descricoes-contador">
                             <i class="fa-solid fa-plus" data-aumentar-quantidade></i>
                             <span data-quantidade-produto>0</span>
@@ -47,7 +47,41 @@
                 </div>
             </div>
             `
-           
-            });
-        });
+
+    });
+});
+
+
+
+    let btnItem = document.querySelectorAll('.comida__descricoes-btn')
+    let quantidadeProduto = document.querySelectorAll("[data-quantidade-produto]");
+    btnItem.forEach((item, index) => {
+        item.setAttribute('data-pegar-elemento', index);
+        item.addEventListener('click', () => {
+            
+            quantidadeProduto[index].getAttribute("data-quantidade-produto");
+            let quantidade = parseInt(quantidadeProduto[index].textContent)
+            addValorMenssagem(todosItens[index],quantidade) 
+        })
+    })
+
+
+    function addValorMenssagem(item, quantidade){
+        let valorFinalItem = item.precoOriginal * quantidade
+        let menssagem = ` ${quantidade} x ${item.nome} no valor de ${item.precoOriginal}. Total a Pagar: ${valorFinalItem.toFixed(2)}. `
+
+        const urlWhatsApp = `https://wa.me/5581988742454?text=${encodeURIComponent(menssagem)}`;
+        window.open(urlWhatsApp);
+        
+    }
+    
+
+    
+
+   
+
+    
+    
+      
+
 
