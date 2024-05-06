@@ -9,7 +9,7 @@
             let tituloCategoria = document.createElement('h2')
             tituloCategoria.classList.add('comida__titulo')
             tituloCategoria.id = itemCategoria.categoria
-            console.log(tituloCategoria.id)
+         
             tituloCategoria.textContent = itemCategoria.categoria
 
             let cardsComida = document.createElement('div')
