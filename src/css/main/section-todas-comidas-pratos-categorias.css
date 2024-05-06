@@ -159,6 +159,12 @@
 
 }
 
+.menssagem__error{
+   display: none;
+   font-size: 1rem;
+    color: brown;
+}
+
 
 @media screen and (max-width:1297px) {
     .comida__card__descricoes__img{

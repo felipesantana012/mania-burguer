@@ -31,7 +31,7 @@ cardapio.forEach(itemCategoria => {
                     </ul>
                     <p class="comida__descricoes-final">${item.descricao}</p>
                     <div class="comida__descricoes-btn-icon">
-                        <button class="comida__descricoes-btn" data-pegar-elemento>Pedir</button>
+                        <button class="comida__descricoes-btn" data-pegar-elemento >Pedir</button>
                         <div class="comida__descricoes-contador">
                             <i class="fa-solid fa-plus" data-aumentar-quantidade></i>
                             <span data-quantidade-produto>0</span>
@@ -39,6 +39,7 @@ cardapio.forEach(itemCategoria => {
                         </div>
     
                     </div>
+                    <span class="menssagem__error"></span>
                 </div>
     
                 <div class="comida__img">
@@ -55,13 +56,24 @@ cardapio.forEach(itemCategoria => {
 
     let btnItem = document.querySelectorAll('.comida__descricoes-btn')
     let quantidadeProduto = document.querySelectorAll("[data-quantidade-produto]");
+    let menssagemError = document.querySelectorAll(".menssagem__error");
+
     btnItem.forEach((item, index) => {
         item.setAttribute('data-pegar-elemento', index);
         item.addEventListener('click', () => {
             
             quantidadeProduto[index].getAttribute("data-quantidade-produto");
             let quantidade = parseInt(quantidadeProduto[index].textContent)
-            addValorMenssagem(todosItens[index],quantidade) 
+            if(quantidade>0){
+                
+                menssagemError[index].style.display = "none"
+                addValorMenssagem(todosItens[index],quantidade)           
+            }else{  
+                menssagemError[index].textContent = "Selecione no mínimo 1 item."; 
+                menssagemError[index].style.display = "inline"
+
+            }   
+            
         })
     })
 

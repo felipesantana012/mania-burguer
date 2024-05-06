@@ -9,6 +9,7 @@ aumentarQuantidade.forEach(botao => {
             quantidade++;
             quantidadeProduto.setAttribute('data-quantidade-produto', quantidade);
             quantidadeProduto.textContent = quantidade;
+           
         } else {
             quantidadeProduto.textContent = 0;
         }
