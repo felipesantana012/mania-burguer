@@ -39,7 +39,17 @@ footer{
 }
 
 
-.todo-item{
+#btnVoltarTopo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     display: none;
+    z-index: 1;
+    color: var(--cor-fonte-primeiro);
+    border: 2px solid var(--cor-fonte-terceiro);
+    background-color: var(--cor-fonte-terceiro);
+    width: 40px;
+    height: 30px;
+    border-radius: 1rem;
+    cursor: pointer;
 }
-

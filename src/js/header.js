@@ -10,20 +10,18 @@ div.innerHTML = `
 <div class="cabecalho__menu">
 <ul class="cabecalho__menu__lista">
   <li class="cabecalho__menu__lista-link">
-    <a href="#" class="cabecalho__menu__lista-link-ancora">Home</a>
+    <a href="/" class="cabecalho__menu__lista-link-ancora">Home</a>
   </li>
 
   <li class="cabecalho__menu__lista-link">
-    <a href="#" class="cabecalho__menu__lista-link-ancora">Cardapio</a>
+    <a href="#cardapio" class="cabecalho__menu__lista-link-ancora">Cardapio</a>
   </li>
 
   <li class="cabecalho__menu__lista-link">
-    <a href="#" class="cabecalho__menu__lista-link-ancora">Contato</a>
+    <a href="#contato" class="cabecalho__menu__lista-link-ancora">Contato</a>
   </li>
 
-  <li class="cabecalho__menu__lista-link">
-    <a href="#" class="cabecalho__menu__lista-link-ancora">Feedbacks</a>
-  </li>
+
 
   <li class="cabecalho__menu__lista-link">
     <div class="cabecalho__menu__dark">
@@ -45,20 +43,18 @@ div.innerHTML = `
 
 <div class="menu-burguer-links " >
 <li class="cabecalho__menu__lista-link">
-  <a href="#" class="cabecalho__menu__lista-link-ancora">Home</a>
+  <a href="/" class="cabecalho__menu__lista-link-ancora">Home</a>
 </li>
 
 <li class="cabecalho__menu__lista-link">
-  <a href="#" class="cabecalho__menu__lista-link-ancora">Cardapio</a>
+  <a href="#cardapio" class="cabecalho__menu__lista-link-ancora">Cardapio</a>
 </li>
 
 <li class="cabecalho__menu__lista-link">
-  <a href="#" class="cabecalho__menu__lista-link-ancora">Contato</a>
+  <a href="#contato" class="cabecalho__menu__lista-link-ancora">Contato</a>
 </li>
 
-<li class="cabecalho__menu__lista-link">
-  <a href="#" class="cabecalho__menu__lista-link-ancora">Feedbacks</a>
-</li>
+
 
 <li class="cabecalho__menu__lista-link">
     <div class="cabecalho__menu__dark">

@@ -221,7 +221,7 @@ function initSlider({startAtIndex = 0, autoPlay = true, timeInterval = 3000}) {
 initSlider({
     autoPlay: true,
     startAtIndex: 0,
-    timeInterval: 4000
+    timeInterval: 3000
 })
 
 

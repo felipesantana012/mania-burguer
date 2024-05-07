@@ -7,6 +7,8 @@
     <title>Mania Food</title>
     <link rel="icon" type="image/png" href="/src/img/logos-icone/Icone-Mania-Food.png">
     <link rel="stylesheet" href="/src/css/config/imports.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -15,6 +17,7 @@
         </header>
 
         <main>
+            <button id="btnVoltarTopo" ><i class="fa-solid fa-arrow-up"></i></button>
             <section class="wrapper">
                 <div class="slide-wrapper" data-slide="wrapper">
                     <button class="slide-nav-button slide-nav-previous fas fa-chevron-left"
@@ -65,7 +68,7 @@
                             </ul>
                             <p class="prato__descricoes-final">Pizza com bordas recheada, coberta de muito recheio e
                                 muito sabor!</p>
-                            <button class="prato__descricoes-btn">Adicionar</button>
+                            <button class="prato__descricoes-btn">Pedir Agora</button>
                         </div>
 
                         <div class="prato__img">
@@ -76,11 +79,11 @@
                 </div>
             </section>
 
-            <section class="todas__comidas__pratos__categorias">
+            <section class="todas__comidas__pratos__categorias" id="cardapio">
 
             </section>
 
-            <section class="localizacao__contato">
+            <section class="localizacao__contato" id="contato">
                 <div class="localizacao__contato__titulo-logo">
                     <h2 class="localizacao__contato-titulo">Nossa Localização</h2>
                     <img class="localizacao__contato-img" src="/src/img/logos-icone/icone-localizacao.png" alt="">
@@ -151,6 +154,7 @@
     <script src="/src/js/slides.js"></script>
     <script src="/src/js/scriptComidas.js"></script>
     <script src="/src/js/valorProdutos.js"></script>
+    <script src="src/js/scroll.js"></script>
 </body>
 
 </html>
