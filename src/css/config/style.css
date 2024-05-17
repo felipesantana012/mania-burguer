@@ -20,7 +20,7 @@ header{
     background-color: var(--cor-transparente);
     color: var(--cor-fonte-primeiro);
     grid-area: h;
-    z-index: 2;
+    z-index: 3;
 }
 
 

@@ -78,14 +78,33 @@ cardapio.forEach(itemCategoria => {
     })
 
 
+    let todosPedidos = []
+
     function addValorMenssagem(item, quantidade){
         let valorFinalItem = item.precoOriginal * quantidade
         let menssagem = ` ${quantidade} x ${item.nome} no valor de ${item.precoOriginal}. Total a Pagar: ${valorFinalItem.toFixed(2)}. `
 
-        const urlWhatsApp = `https://wa.me/5581988742454?text=${encodeURIComponent(menssagem)}`;
-        window.open(urlWhatsApp);
+        let pedido = {
+            quantidade:quantidade,
+            nome:item.nome,
+            precoOriginal:item.precoOriginal,
+            precoFinal:valorFinalItem.toFixed(2)
+        }
+    
+        todosPedidos.push(pedido)
+        console.log(todosPedidos)
+        localStorage.setItem('Pedidos', JSON.stringify(todosPedidos))
+        // const urlWhatsApp = `https://wa.me/5581988742454?text=${encodeURIComponent(menssagem)}`;
+        // window.open(urlWhatsApp);
         
     }
+
+   
+    
+
+       
+
+        
     
 
     
