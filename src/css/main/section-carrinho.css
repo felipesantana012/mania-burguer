@@ -1,12 +1,37 @@
+.carrinho-icone{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 1;
+    border: 1px solid var(--cor-fonte-terceiro);
+    background-color: var(--transparente);
+    width: 50px;
+    height: 50px;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    padding: 6px;
+    transition: all 0.5s;
+}
+.carrinho-icone:hover{
+    transform: scale(1.05);
+    background-color: var(--cor-fonte-terceiro);
+    opacity: 0.8;
+}
+
+.carrinho-icone img{
+    width: 100%;
+    height: 100%;
+}
 
 .carrinho-pedidos{
+    display: none;
    padding: 1rem;
     position: fixed;
     right: 20px;
     bottom: 20px;
     z-index: 1;
     width: 200px;
-    height: 180px;
+    height: auto;
     border-radius: 10px; 
     border: 2px solid var(--cor-fonte-terceiro);
     background-color: var(--cor-background-primeiro);
@@ -25,9 +50,21 @@
 .carrinho__titulo{
     text-align: center;
     font-family: var(--fonte-titulo);
-    font-weight: 600;
+    font-weight: 500;
     color: var(--cor-background-segundo);
+    margin-bottom: 10px;
     
+}
+
+.carrinho__fechar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--cor-vermelho);
+    padding: 6px;
+    border-radius: 0px 8px 0px 0;
+    cursor: pointer;
+    color: var(--cor-fonte-primeiro);
 }
 
 .carrinho__lista__itens{
@@ -48,10 +85,17 @@
 
 .carrinho__item-quantidade{
     font-family: var(--fonte-texto);
- 
+}
+
+#deletar-item{
+    font-size: 1.1rem;
+    cursor: pointer;
+
 }
 
 .carrinho__valor-total{
+    margin-top: 10px;
+    margin-bottom: 5px;
     font-family: var(--fonte-titulo);
     font-size: 0.9rem;
     color: var(--cor-background-segundo);
@@ -81,3 +125,4 @@
    opacity: 0.7;
    transform: scale(1.03);
 }
+
