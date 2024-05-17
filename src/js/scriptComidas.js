@@ -87,12 +87,11 @@ cardapio.forEach(itemCategoria => {
         // Se não existir, inicializa a chave com um array vazio
         localStorage.setItem('Pedidos', JSON.stringify([]));
     }
-    
+
     let todosPedidos = JSON.parse(localStorage.getItem('Pedidos'))
     function addValorMenssagem(item, quantidade){
         
         let valorFinalItem = item.precoOriginal * quantidade
-        let menssagem = ` ${quantidade} x ${item.nome} no valor de ${item.precoOriginal}. Total a Pagar: ${valorFinalItem.toFixed(2)}. `
 
         let pedido = {
             quantidade:quantidade,
@@ -102,27 +101,37 @@ cardapio.forEach(itemCategoria => {
         }
     
         todosPedidos.push(pedido)
-        console.log(todosPedidos)
         localStorage.setItem('Pedidos', JSON.stringify(todosPedidos))
         getPedidoLocalStorage()
-        // const urlWhatsApp = `https://wa.me/5581988742454?text=${encodeURIComponent(menssagem)}`;
-        // window.open(urlWhatsApp);   
     }
+
     getPedidoLocalStorage()
    
 
-    // let criarPedidoLocalStorage = (pedido) =>{
-    //     let itensPedido =  JSON.parse(localStorage.getItem('Pedidos',itensPedido))
-    //     itensPedido.push(pedido)
-    //     localStorage.setItem('Pedidos', JSON.stringify(itensPedido))
-    // }
+    let btnFinalizarPedido = document.querySelector('.carrinho__btn-finalizar')
+    btnFinalizarPedido.addEventListener('click', () =>{
+        let itensPedidoConvertido = JSON.parse(localStorage.getItem('Pedidos',todosPedidos))
+        let menssagem = ``
+        let somaValorTotal = 0
+        itensPedidoConvertido.forEach((item, index) => {
+            menssagem += `
+                          ${item.quantidade}x ${item.nome} valor de ${item.precoOriginal} cada.
+            `
+            somaValorTotal += JSON.parse(item.precoFinal)
+        })
+
+        let stringValorTotal = `Total a pagar: ${somaValorTotal.toFixed(2)}`
+        const urlWhatsApp = `https://wa.me/5581988742454?text=${encodeURIComponent(menssagem + stringValorTotal)}`;
+        window.open(urlWhatsApp);
+
+       
+
+    })
 
     
     function getPedidoLocalStorage(){
         
-       let itensPedidoConvertido = JSON.parse(localStorage.getItem('Pedidos',todosPedidos)) ?? []
-
-        
+       let itensPedidoConvertido = JSON.parse(localStorage.getItem('Pedidos',todosPedidos))
 
        let carrinhoListaItens = document.querySelector('.carrinho__lista__itens')
        let totalPagar = document.querySelector('.carrinho__valor-total span')
@@ -142,8 +151,7 @@ cardapio.forEach(itemCategoria => {
             `
             carrinhoListaItens.append(li)
             let x =  JSON.parse(item.precoFinal)
-            somaTotalPagar += x
-                 
+            somaTotalPagar += x          
 
        })
        
@@ -151,7 +159,7 @@ cardapio.forEach(itemCategoria => {
        totalPagar.textContent = somaTotalPagar.toFixed(2)
     }
 
-    console.log('oiiiiiiiiiii')
+
 
    
 
