@@ -92,20 +92,35 @@ btnMenuBurguer.addEventListener('click', () =>{
 
 
 // --------------------------INICIO MODO-DARK--------------------------
-const html = document.querySelector('html')
-const ativarModoDark = document.querySelector('#ativar-modo-dark')
+const html = document.querySelector('html');
+const ativarModoDark = document.querySelector('#ativar-modo-dark');
+const ativarModoDarkMobile = document.querySelector('#ativar-modo-dark-mobile');
 
-ativarModoDark.addEventListener('change' , () =>{
-    html.classList.toggle('dark-mode')
-})
+// Função para aplicar o estado do modo escuro baseado no localStorage
+function aplicarModoDark() {
+    if (localStorage.getItem('dark-mode') === 'true') {
+        html.classList.add('dark-mode');
+        ativarModoDark.checked = true;
+        ativarModoDarkMobile.checked = true;
+    } else {
+        html.classList.remove('dark-mode');
+        ativarModoDark.checked = false;
+        ativarModoDarkMobile.checked = false;
+    }
+}
+
+// Função para alternar o modo escuro e salvar o estado no localStorage
+function alternarModoDark() {
+    const isDarkMode = html.classList.toggle('dark-mode');
+    localStorage.setItem('dark-mode', isDarkMode);
+}
 
 
-const ativarModoDarkMobile = document.querySelector('#ativar-modo-dark-mobile')
+aplicarModoDark();
 
-ativarModoDarkMobile.addEventListener('change' , () =>{
-    html.classList.toggle('dark-mode')
-})
-
+// Adicionar event listeners para os botões de alternância
+ativarModoDark.addEventListener('change', alternarModoDark);
+ativarModoDarkMobile.addEventListener('change', alternarModoDark);
 
 // --------------------------FIM MODO-DARK--------------------------
 

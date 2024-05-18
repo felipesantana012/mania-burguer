@@ -119,9 +119,7 @@ cardapio.forEach(itemCategoria => {
         let menssagem = ``
         let somaValorTotal = 0
         itensPedidoConvertido.forEach((item, index) => {
-            menssagem += `
-                          ${item.quantidade}x ${item.nome} valor de ${item.precoOriginal} cada.
-            `
+            menssagem += `${item.quantidade}x ${item.nome} valor de ${item.precoOriginal} cada.`
             somaValorTotal += JSON.parse(item.precoFinal)
         })
 
@@ -193,21 +191,7 @@ cardapio.forEach(itemCategoria => {
         
     
 
-    
-    let btnPromocao = document.querySelector('.prato__descricoes-btn')
-    btnPromocao.addEventListener('click', () => {
-        let h3 = document.querySelector('.prato__titulo').textContent
-        let nome = document.querySelector('.prato__descricoes-nome').textContent
-        let tamanho = document.querySelector('.prato__descricoes_informacoes-item').textContent
-        let precoOriginal = document.querySelector('.preco-original').textContent
-        let precoFinal = document.querySelector('.preco-final').textContent
-
-        let menssagem = `${h3}: ${nome} ${tamanho} ${precoOriginal} ${precoFinal} `
-
-        const urlWhatsApp = `https://wa.me/5581988742454?text=${encodeURIComponent(menssagem)}`;
-        window.open(urlWhatsApp);
-    })
-    
+   
       
 
 
