@@ -14,7 +14,7 @@
 }
 .carrinho-icone:hover{
     transform: scale(1.05);
-    background-color: var(--cor-fonte-terceiro);
+    background-color: var( --cor-hover-border-segundo);
     opacity: 0.8;
 }
 
@@ -65,6 +65,12 @@
     border-radius: 0px 8px 0px 0;
     cursor: pointer;
     color: var(--cor-fonte-primeiro);
+    transition: all 0.5s;
+}
+
+.carrinho__fechar:hover{
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 
 .carrinho__lista__itens{

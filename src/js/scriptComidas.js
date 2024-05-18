@@ -73,33 +73,37 @@ cardapio.forEach(itemCategoria => {
                 carrinhoIcone.style.display = "none"
                 menssagemError[index].style.display = "none"
                 addValorMenssagem(todosItens[index],quantidade)  
+                
 
             }else{  
                 menssagemError[index].textContent = "Selecione no mínimo 1 item."; 
                 menssagemError[index].style.display = "inline"
-
-            }   
-            
+            }     
         })
     })
 
+
+  
+
+
+
+     // Se não existir, inicializa a chave com um array vazio
     if (!localStorage.getItem('Pedidos')) {
-        // Se não existir, inicializa a chave com um array vazio
         localStorage.setItem('Pedidos', JSON.stringify([]));
     }
 
-    let todosPedidos = JSON.parse(localStorage.getItem('Pedidos'))
-    function addValorMenssagem(item, quantidade){
-        
-        let valorFinalItem = item.precoOriginal * quantidade
 
+    //Adicionando dados no local storage
+    let todosPedidos = JSON.parse(localStorage.getItem('Pedidos'))
+    function addValorMenssagem(item, quantidade){    
+        let valorFinalItem = item.precoOriginal * quantidade
         let pedido = {
             quantidade:quantidade,
             nome:item.nome,
             precoOriginal:item.precoOriginal,
             precoFinal:valorFinalItem.toFixed(2)
         }
-    
+        todosPedidos = JSON.parse(localStorage.getItem('Pedidos'))
         todosPedidos.push(pedido)
         localStorage.setItem('Pedidos', JSON.stringify(todosPedidos))
         getPedidoLocalStorage()
@@ -108,6 +112,7 @@ cardapio.forEach(itemCategoria => {
     getPedidoLocalStorage()
    
 
+    //Finalizando o pedido e enviado para Whatsapp
     let btnFinalizarPedido = document.querySelector('.carrinho__btn-finalizar')
     btnFinalizarPedido.addEventListener('click', () =>{
         let itensPedidoConvertido = JSON.parse(localStorage.getItem('Pedidos',todosPedidos))
@@ -123,20 +128,19 @@ cardapio.forEach(itemCategoria => {
         let stringValorTotal = `Total a pagar: ${somaValorTotal.toFixed(2)}`
         const urlWhatsApp = `https://wa.me/5581988742454?text=${encodeURIComponent(menssagem + stringValorTotal)}`;
         window.open(urlWhatsApp);
-
-       
-
     })
 
-    
-    function getPedidoLocalStorage(){
-        
-       let itensPedidoConvertido = JSON.parse(localStorage.getItem('Pedidos',todosPedidos))
 
+   
+
+    
+    //criando item de pedido no carrinho
+    function getPedidoLocalStorage(){
+       let itensPedidoConvertido = JSON.parse(localStorage.getItem('Pedidos',todosPedidos))
        let carrinhoListaItens = document.querySelector('.carrinho__lista__itens')
        let totalPagar = document.querySelector('.carrinho__valor-total span')
+        
        let somaTotalPagar =0
-
        carrinhoListaItens.textContent = ''
 
        itensPedidoConvertido.forEach((item,index) =>{
@@ -146,32 +150,40 @@ cardapio.forEach(itemCategoria => {
             <p class="carrinho__item-quantidade">${item.quantidade}<span>x</span></p>
             <h3 class="carrinho__item-titulo">${item.nome}</h3>                   
             <p class="carrinho__item-valor">${item.precoOriginal}<span>R$</span></p>
-            <i class="fa-regular fa-trash-can" id="deletar-item"></i>
-            
-            `
+            <i class="fa-regular fa-trash-can" id="deletar-item" data-deletar-item="${index}" onclick="removerItemLocalStorage(${index})"></i>
+            `  
+
             carrinhoListaItens.append(li)
             let x =  JSON.parse(item.precoFinal)
-            somaTotalPagar += x          
-
+            somaTotalPagar += x         
        })
-       
-       
+      
        totalPagar.textContent = somaTotalPagar.toFixed(2)
+      
     }
 
 
 
+
+
+    // Função para remover um item do Local Storage pelo índice
+    function removerItemLocalStorage(index) {
+    let itens = JSON.parse(localStorage.getItem('Pedidos',todosPedidos))
+        itens.splice(index, 1);  
+       todosPedidos = localStorage.setItem('Pedidos', JSON.stringify(itens));
+       getPedidoLocalStorage() 
+     
+    }
+
    
 
-
+    //Mostrando e escodendo logo do carrinho e O X do carrinho para fechar
     let carrinhoIcone = document.querySelector('.carrinho-icone')
     let carrinhoFechar = document.querySelector('.carrinho__fechar')
-
     carrinhoIcone.addEventListener('click', () =>{
         carrinhoIcone.style.display = "none"
         carrinho.style.display = "block"
     })
-
     carrinhoFechar.addEventListener('click', () => {
         carrinhoIcone.style.display = "block"
         carrinho.style.display = "none"
@@ -182,9 +194,7 @@ cardapio.forEach(itemCategoria => {
     
 
     
- let btnPromocao = document.querySelector('.prato__descricoes-btn')
-   
-
+    let btnPromocao = document.querySelector('.prato__descricoes-btn')
     btnPromocao.addEventListener('click', () => {
         let h3 = document.querySelector('.prato__titulo').textContent
         let nome = document.querySelector('.prato__descricoes-nome').textContent

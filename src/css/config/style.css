@@ -52,5 +52,10 @@ footer{
     height: 30px;
     border-radius: 1rem;
     cursor: pointer;
+    transition: all 0.5s;
 }
 
+#btnVoltarTopo:hover{
+    transform: scale(1.06);
+    opacity: 0.8;
+}
