@@ -73,7 +73,7 @@ cardapio.forEach(itemCategoria => {
                 carrinhoIcone.style.display = "none"
                 menssagemError[index].style.display = "none"
                 addValorMenssagem(todosItens[index],quantidade)  
-                
+                quantidadeProduto[index].textContent = 0
 
             }else{  
                 menssagemError[index].textContent = "Selecione no mínimo 1 item."; 
@@ -81,10 +81,6 @@ cardapio.forEach(itemCategoria => {
             }     
         })
     })
-
-
-  
-
 
 
      // Se não existir, inicializa a chave com um array vazio
@@ -145,10 +141,16 @@ cardapio.forEach(itemCategoria => {
         let li = document.createElement('li')
             li.classList.add('carrinho__item')
             li.innerHTML += `
+
+            <div class="carrinho__item-quantidade-titulo">
             <p class="carrinho__item-quantidade">${item.quantidade}<span>x</span></p>
-            <h3 class="carrinho__item-titulo">${item.nome}</h3>                   
+            <h3 class="carrinho__item-titulo">${item.nome}</h3>
+            </div>
+            
+            <div class="carrinho__item-valor-icon-lixeira">                   
             <p class="carrinho__item-valor">${item.precoOriginal}<span>R$</span></p>
             <i class="fa-regular fa-trash-can" id="deletar-item" data-deletar-item="${index}" onclick="removerItemLocalStorage(${index})"></i>
+            </div>
             `  
 
             carrinhoListaItens.append(li)

@@ -77,12 +77,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 10px;
+    gap: 15px;
 }
 
 .carrinho__item{
     display: flex;
-    gap: 6px;
+    justify-content: space-between;
+    gap: 7px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 0.9rem;
     color: var(--cor-background-segundo);
@@ -93,9 +94,32 @@
     font-family: var(--fonte-texto);
 }
 
+.carrinho__item-titulo{
+    text-align: left;
+}
+
+.carrinho__item-quantidade-titulo{
+    display: flex;
+    gap: 5px;
+}
+
+.carrinho__item-valor-icon-lixeira{
+    display: flex;
+    gap: 5px;
+}
+
 #deletar-item{
     font-size: 1.1rem;
     cursor: pointer;
+    color: var(--cor-fonte-terceiro);
+    transition: linear 0.3s;
+    opacity: 0.8;
+}
+
+
+#deletar-item:hover{
+    transform: scale(1.1);
+    color: var(--cor-vermelho);
 
 }
 
