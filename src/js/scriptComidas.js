@@ -115,13 +115,17 @@ cardapio.forEach(itemCategoria => {
         let menssagem = ``
         let somaValorTotal = 0
         itensPedidoConvertido.forEach((item, index) => {
-            menssagem += `${item.quantidade}x ${item.nome} valor de ${item.precoOriginal} cada.`
-            somaValorTotal += JSON.parse(item.precoFinal)
+            menssagem += `${item.quantidade}x ${item.nome} valor de ${item.precoOriginal} cada. \n`
+            somaValorTotal += parseFloat(item.precoFinal);
         })
+   
+        if(somaValorTotal > 0){
+            let stringValorTotal = `Total a pagar: ${somaValorTotal.toFixed(2)}`
+            const urlWhatsApp = `https://wa.me/5581988742454?text=${encodeURIComponent(menssagem + stringValorTotal)}`;
+            window.open(urlWhatsApp);
+        }
 
-        let stringValorTotal = `Total a pagar: ${somaValorTotal.toFixed(2)}`
-        const urlWhatsApp = `https://wa.me/5581988742454?text=${encodeURIComponent(menssagem + stringValorTotal)}`;
-        window.open(urlWhatsApp);
+      
     })
 
 
